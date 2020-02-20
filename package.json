@@ -1,0 +1,27 @@
+{
+  "name": "it-company",
+  "version": "1.0.0",
+  "description": "Static site about it-company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArteomIsaev/It-Company.git"
+  },
+  "author": "Isaev A.O.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArteomIsaev/It-Company/issues"
+  },
+  "homepage": "https://github.com/ArteomIsaev/It-Company#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browsersync": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
