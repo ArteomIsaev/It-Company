@@ -83,6 +83,12 @@ $blue: #4985FF;
 $w: #ffffff;
 
 
+@mixin Montserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+
+}
+
 .header {
   height: 100vh;
   background: url('../img/first-section/header-bg.png') no-repeat;
@@ -90,7 +96,7 @@ $w: #ffffff;
 }
 .nav-wrapper {
   margin: 0;
-  padding: 2% 20% 2% 40%;
+  padding: 40px 20% 40px 40%;
   max-width: 100%;
   height: 100px;
 }
@@ -103,24 +109,78 @@ $w: #ffffff;
   color:$w;
   text-decoration: none;
   position: relative;
+  padding: 5px;
 
   &:after {
     content: '';
     background-color: $w;
     display: block;
     height: 2px;
-    width: 100%;
-    top: 207%;
+    left: -23%;
+    width: 0;
+    top: 67px;
     position: absolute;
   }
+
+
+  &:hover:after {
+    width: 150%;
+  }
   
+
   &:active {
     color: $blue;
   }
+}
+.header_hr {
+  color: red;
+  border: 0;
+  height: 1px;
+}
+// End of header-menu
 
-  &:hover {
-    // padding-bottom: 30px;
-    // margin-bottom: 30px;
-    // border-bottom: 2px $w solid;
+.header-content {
+  width: 50%;
+  // background-color: #ccc;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 10%;
+
+  &_title {
+    @include Montserrat();
+
+    color: $w;
+    margin-bottom: 20px;
+  }
+
+  &_slogan {
+    @include Montserrat();
+
+    color: $w;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 50px;
+  }
+
+  &_button {
+    @include Montserrat();
+
+    height: 45px;
+    width: 200px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    border-radius: 30px;
+    background-color: $blue;
+    border: none;
+    outline: none;
+    color: $w;
+    cursor: pointer;
   }
 }
+
+// End of header
+
