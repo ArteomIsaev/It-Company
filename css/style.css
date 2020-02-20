@@ -67,8 +67,33 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
 
-body {
-  background-color: #a5ad4d; }
+.header {
+  height: 100vh;
+  background: url("../img/first-section/header-bg.png") no-repeat;
+  background-size: cover; }
 
-h1 {
-  color: #2DD43a; }
+.nav-wrapper {
+  margin: 0;
+  padding: 2% 20% 2% 40%;
+  max-width: 100%;
+  height: 100px; }
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.header-menu_item {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative; }
+  .header-menu_item:after {
+    content: '';
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    width: 100%;
+    top: 207%;
+    position: absolute; }
+  .header-menu_item:active {
+    color: #4985FF; }

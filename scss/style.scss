@@ -79,10 +79,48 @@ select {
 
 //Reset default browser styles
 
-$main-color: #a5ad4d;
-body {
-    background-color: $main-color;
+$blue: #4985FF;
+$w: #ffffff;
+
+
+.header {
+  height: 100vh;
+  background: url('../img/first-section/header-bg.png') no-repeat;
+  background-size: cover;
 }
-h1 {
-    color: #2DD43a;
+.nav-wrapper {
+  margin: 0;
+  padding: 2% 20% 2% 40%;
+  max-width: 100%;
+  height: 100px;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-menu_item {
+  color:$w;
+  text-decoration: none;
+  position: relative;
+
+  &:after {
+    content: '';
+    background-color: $w;
+    display: block;
+    height: 2px;
+    width: 100%;
+    top: 207%;
+    position: absolute;
+  }
+  
+  &:active {
+    color: $blue;
+  }
+
+  &:hover {
+    // padding-bottom: 30px;
+    // margin-bottom: 30px;
+    // border-bottom: 2px $w solid;
+  }
 }
