@@ -206,3 +206,78 @@ select {
     cursor: pointer;
     margin-top: 50px;
     margin-bottom: 100px; }
+
+.third-section {
+  width: 100%;
+  height: 887px;
+  background-color: #ccc;
+  padding-top: 100px;
+  background: #F6F6F8; }
+  .third-section-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto 100px auto; }
+    .third-section-wrapper-text {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      max-width: 500px; }
+      .third-section-wrapper-text__title {
+        font-weight: bold;
+        fonfont-weight: bold;
+        font-size: 36px;
+        line-height: 53px;
+        width: 424px;
+        height: 88px;
+        margin-bottom: 40px; }
+      .third-section-wrapper-text__text {
+        width: 489px;
+        height: 117px;
+        font-size: 16px;
+        color: #999999;
+        line-height: 25px;
+        margin-bottom: 30px; }
+      .third-section-wrapper-text__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration-line: underline;
+        color: #4985FF; }
+    .third-section-wrapper-img {
+      justify-self: center;
+      align-self: center; }
+    .third-section-wrapper-hr {
+      grid-column: 1/3; }
+      .third-section-wrapper-hr__hr {
+        height: 1px;
+        background-color: #E0E0E0;
+        border: 0; }
+  .third-section-projects {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 auto;
+    max-width: 900px; }
+    .third-section-projects-item {
+      width: 104px;
+      height: 67px; }
+      .third-section-projects-item-head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 7px; }
+        .third-section-projects-item-head__text {
+          font-size: 36px;
+          line-height: 53px;
+          color: #000000; }
+      .third-section-projects-item-footer {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 25px;
+        color: #999999;
+        margin-bottom: 70px; }
