@@ -81,12 +81,24 @@ select {
 
 $blue: #4985FF;
 $w: #ffffff;
+$grey: #999999;
 
 
 @mixin Montserrat {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
+}
 
+@mixin button {
+  height: 45px;
+  width: 200px;
+  box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+  border-radius: 30px;
+  background-color: $blue;
+  border: none;
+  outline: none;
+  color: $w;
+  cursor: pointer;
 }
 
 .header {
@@ -168,19 +180,87 @@ $w: #ffffff;
 
   &_button {
     @include Montserrat();
+    @include button();
 
-    height: 45px;
-    width: 200px;
     margin: 0 auto;
-    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
-    border-radius: 30px;
-    background-color: $blue;
-    border: none;
-    outline: none;
-    color: $w;
-    cursor: pointer;
   }
 }
 
 // End of header
 
+.second-section {
+  height: 700px;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_title {
+    @include Montserrat();
+    
+    text-align: center;
+    font-weight: bold;
+    width: 900px;
+    height: 100px;
+    font-size: 36px;
+    line-height: 53px;
+    color: #323232;
+    margin-bottom: 50px;
+  }
+
+  &_text {
+    @include Montserrat();
+
+    width: 750px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: $grey;
+    margin-bottom: 70px;
+  }
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1113px;
+  }
+
+  &-block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    &-text {
+      @include Montserrat();
+
+      display: flex;
+      flex-direction: column;
+      padding-top: 15%;
+
+      &_title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+      }
+
+      &_text {
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey;
+        width: 222px;
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &-button {
+    @include button();
+
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+
+}
