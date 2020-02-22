@@ -110,8 +110,8 @@ $black: #000000;
 
 .header {
   height: 100vh;
-  background: url('../img/first-section/header-bg.png') no-repeat;
-  background-size: cover;
+  background: url('../img/first-section/header-bg.png') top / cover no-repeat;
+  max-width: 100%;
 }
 .nav-wrapper {
   margin: 0;
@@ -527,7 +527,7 @@ $black: #000000;
 .sixth-section {
   @include Montserrat();
 
-  height: 735px;
+  height: 1100px;
   width: 100%;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('../img/sixth-section/bg.png') no-repeat;
   background-size: contain;
@@ -638,5 +638,123 @@ $black: #000000;
       color: $grey;
       margin-bottom: 85px;
     }
+  }
+}
+
+// End of sixth section
+
+.footer {
+  @include Montserrat();
+  height: 100%;
+  background: #F6F6F8;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    margin-bottom: 15%;
+
+    &-item {
+      width: 255px;
+      display: grid;
+      margin-right: 40px;
+      list-style: none;
+      align-self: start;
+      grid-gap: 15%;
+
+      &-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $black;
+        height: 30px; 
+      }
+
+      &-contact {
+        display: grid;
+        grid-gap: 35%;
+        padding-left: 10%;
+      }
+
+      &-contact1 {
+        position: relative;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey;
+
+        &::before {
+          content: url('../img/sixth-section/mail.svg');
+          position: absolute;
+          left: -10%;
+          top: 15%;
+        }
+      }
+
+      &-contact2 {
+        position: relative;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey;
+
+        &::before {
+          content: url('../img/sixth-section/call.svg');
+          position: absolute;
+          left: -10%;
+          top: 15%;
+        }
+      }
+
+      &-contact3 {
+        position: relative;
+        font-size: 14px;
+        line-height: 22px;
+        color: $grey;
+
+        &::before {
+          content: url('../img/sixth-section/call.svg');
+          position: absolute;
+          left: -10%;
+          top: 15%;
+        }
+      }
+
+      &-listitem {
+        display: grid;
+        grid-gap: 25%;
+        padding-left: 10%;
+
+        &__item {
+          position: relative;
+          font-size: 14px;
+          line-height: 22px;
+          color: $grey;
+
+          &::before {
+            content: '>';
+            position: absolute;
+            left: -10%;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-hr__hr {
+    height: 1px;
+    background-color: #E0E0E0;
+    border: 0;
+    margin-bottom: 5%;
+  }
+
+  &-text {
+    text-align: center;
+    font-size: 13px;
+    line-height: 21px;
+    color: $grey;
+    padding-bottom: 5%;
   }
 }
