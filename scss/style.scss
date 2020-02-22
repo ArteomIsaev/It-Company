@@ -518,7 +518,125 @@ $black: #000000;
 
   &__button {
     @include button();
+    margin-bottom: 130px;
   }
 }
 
 // End of fifth section
+
+.sixth-section {
+  @include Montserrat();
+
+  height: 735px;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url('../img/sixth-section/bg.png') no-repeat;
+  background-size: contain;
+  text-align: center;
+  margin: 0 auto;
+
+  &-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    color: $w;
+    margin-bottom: 30px;
+  }
+
+  &-subtitle {
+    font-size: 16px;
+    line-height: 25px;
+    color: $w;
+    margin-bottom: 70px;
+  }
+
+  &-video {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url('../img/sixth-section/vido=eo-bg.png');
+    height: 430px;
+    width: 970px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(111, 111, 111, 0.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 85px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &-border {
+      height: 100px;
+      width: 300px;
+      border: 1px solid $w;
+      border-radius: 200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+
+      &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 25px;
+        color: $w;
+      }
+    }
+  }
+
+  &-hr__hr {
+    height: 1px;
+    background-color: #E0E0E0;
+    border: 0;
+    margin-bottom: 50px;
+  }
+
+  &-subscribe {
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: $black;
+      margin-bottom: 20px;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      line-height: 25px;
+      color: $grey;
+      margin-bottom: 30px;
+    }
+
+    &-wrapper {
+      width: 489px;
+      margin: 0 auto 35px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      
+
+      &__input {
+        outline: 0;
+        border-top: 1px solid #F2F2F2;
+        border-bottom: 1px solid #F2F2F2;
+        border-left: 1px solid #F2F2F2;
+        border-right: 0;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        height: 45px;
+        padding: 13px 33px;
+        margin: 0;
+        box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);      
+      }
+      &__button {
+        @include button();
+
+        box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+    &-notification {
+      font-size: 13px;
+      line-height: 21px;
+      color: $grey;
+      margin-bottom: 85px;
+    }
+  }
+}
